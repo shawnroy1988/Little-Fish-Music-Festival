@@ -48,7 +48,7 @@
       </button>
 
       <nav id="site-nav" aria-label="Main">
-        <a href="#home">Home</a>
+        <a href="#home" aria-current="true">Home</a>
         <a href="#lineup">Lineup</a>
         <a href="#info">Festival Info</a>
         <a href="#location">Location</a>
@@ -76,6 +76,15 @@
               <span class="title-script">Music Festival</span>
             </h1>
             <p class="date">October 6th &amp; 7th</p>
+            <div class="countdown" id="countdown">
+              <p id="countdown-status">Time until the next October 6</p>
+              <div class="countdown-grid" role="group" aria-labelledby="countdown-status">
+                <div class="countdown-unit"><strong data-unit="days">–</strong><span>Days</span></div>
+                <div class="countdown-unit"><strong data-unit="hours">–</strong><span>Hours</span></div>
+                <div class="countdown-unit"><strong data-unit="minutes">–</strong><span>Minutes</span></div>
+                <div class="countdown-unit"><strong data-unit="seconds">–</strong><span>Seconds</span></div>
+              </div>
+            </div>
           </div>
           <div class="hero-more">
             <p class="address">
@@ -91,21 +100,24 @@
         </div>
 
         <figure class="poster">
-          <div class="poster-frame">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="Images/little-fish-fest-poster-800.webp 800w, Images/little-fish-fest-poster.webp 1200w"
-                sizes="(max-width: 899px) 78vw, 420px">
-              <img
-                src="Images/little-fish-fest-poster.jpg"
-                width="1200"
-                height="2600"
-                alt="Official Little Fish Music Fest poster. An iridescent sunfish swims in front of a mirrored disco ball, with glossy red liquid swirls and cyan light beams on a black background. Text reads Little Fish Music Fest, October 6th &amp; 7th, Lancaster, Hurt Lane."
-                fetchpriority="high"
-                decoding="async">
-            </picture>
-          </div>
+          <button type="button" class="poster-open" aria-haspopup="dialog" aria-controls="poster-dialog">
+            <span class="poster-frame">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="Images/little-fish-fest-poster-800.webp 800w, Images/little-fish-fest-poster.webp 1200w"
+                  sizes="(max-width: 899px) 78vw, 420px">
+                <img
+                  src="Images/little-fish-fest-poster.jpg"
+                  width="1200"
+                  height="2600"
+                  alt="Official Little Fish Music Fest poster. An iridescent sunfish swims in front of a mirrored disco ball, with glossy red liquid swirls and cyan light beams on a black background. Text reads Little Fish Music Fest, October 6th &amp; 7th, Lancaster, Hurt Lane."
+                  fetchpriority="high"
+                  decoding="async">
+              </picture>
+            </span>
+            <span class="poster-hint">Enlarge poster</span>
+          </button>
         </figure>
       </div>
     </section>
@@ -126,8 +138,13 @@
           <p>Two days of live music in Lancaster, Kentucky.</p>
         </header>
 
+        <div class="tablist" role="tablist" aria-label="Festival days">
+          <button type="button" role="tab" id="tab-friday" aria-controls="panel-friday" aria-selected="true">Friday</button>
+          <button type="button" role="tab" id="tab-saturday" aria-controls="panel-saturday" aria-selected="false" tabindex="-1">Saturday</button>
+        </div>
+
         <div class="day-grid">
-          <article class="day-card">
+          <article class="day-card" id="panel-friday" role="tabpanel" aria-labelledby="tab-friday" data-open>
             <p class="day-label">Day One</p>
             <h3>Friday</h3>
             <div class="headliner">
@@ -142,7 +159,7 @@
             </ul>
           </article>
 
-          <article class="day-card day-card-alt">
+          <article class="day-card day-card-alt" id="panel-saturday" role="tabpanel" aria-labelledby="tab-saturday">
             <p class="day-label">Day Two</p>
             <h3>Saturday</h3>
             <div class="headliner">
@@ -168,25 +185,32 @@
           <p>Two days of live music, good people, and good times in Lancaster, Kentucky.</p>
         </header>
 
-        <dl class="fact-grid">
-          <div class="fact">
-            <dt>When</dt>
-            <dd>October 6th &amp; 7th</dd>
-          </div>
-          <div class="fact">
-            <dt>Where</dt>
-            <dd>123 Hurt Lane, Lancaster, KY 40444</dd>
-          </div>
-          <div class="fact">
-            <dt>What</dt>
-            <dd>Two days of live music in Lancaster, Kentucky.</dd>
-          </div>
-        </dl>
-
-        <aside class="notice" aria-label="Details not announced yet">
-          <p class="notice-kicker">Not announced yet</p>
-          <p>Set times, policies, and other on-site details have not been published. They will be added here when they are.</p>
-        </aside>
+        <div class="faq">
+          <details open>
+            <summary>When is the festival?</summary>
+            <p>October 6th &amp; 7th.</p>
+          </details>
+          <details>
+            <summary>Where is it?</summary>
+            <p>123 Hurt Lane, Lancaster, KY 40444.</p>
+          </details>
+          <details>
+            <summary>What is it?</summary>
+            <p>Two days of live music, good people, and good times in Lancaster, Kentucky.</p>
+          </details>
+          <details>
+            <summary>Who is playing?</summary>
+            <p><span class="notice-kicker">Not announced yet</span> Headliners and the rest of the lineup are still listed as coming soon.</p>
+          </details>
+          <details>
+            <summary>When do tickets go on sale?</summary>
+            <p><span class="notice-kicker">Not announced yet</span> Prices and a purchase link have not been published.</p>
+          </details>
+          <details>
+            <summary>What time does it start?</summary>
+            <p><span class="notice-kicker">Not announced yet</span> Set times, policies, and other on-site details have not been published.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -200,17 +224,25 @@
             123 Hurt Lane<br>
             Lancaster, KY 40444
           </address>
-          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=123%20Hurt%20Lane%2C%20Lancaster%2C%20KY%2040444" target="_blank" rel="noopener noreferrer">
-            Get directions to 123 Hurt Lane
-            <span class="sr-only">(opens in a new tab)</span>
-          </a>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=123%20Hurt%20Lane%2C%20Lancaster%2C%20KY%2040444" target="_blank" rel="noopener noreferrer">
+              Get directions to 123 Hurt Lane
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+            <button type="button" class="btn btn-ghost" id="gcal-button">Add to Google Calendar</button>
+            <button type="button" class="btn btn-ghost" id="ics-button">Download .ics</button>
+          </div>
         </div>
 
-        <div class="venue-card" aria-hidden="true">
-          <p class="venue-kicker">The grounds</p>
-          <p class="venue-place">123</p>
-          <p class="venue-street">Hurt Lane</p>
-          <p class="venue-city">Lancaster, Kentucky</p>
+        <div class="map-panel">
+          <div class="map-frame">
+            <iframe
+              title="Map of 123 Hurt Lane, Lancaster, KY 40444"
+              src="https://maps.google.com/maps?q=123%20Hurt%20Lane%2C%20Lancaster%2C%20KY%2040444&amp;z=15&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="map-caption">Interactive map for 123 Hurt Lane, Lancaster, KY 40444.</p>
         </div>
       </div>
     </section>
@@ -249,6 +281,18 @@
     </div>
     <p class="colophon">Little Fish Music Festival · Lancaster, Kentucky</p>
   </footer>
+
+  <dialog class="lightbox" id="poster-dialog" aria-labelledby="poster-dialog-title">
+    <div class="lightbox-bar">
+      <h2 id="poster-dialog-title">Little Fish Music Fest poster</h2>
+      <button type="button" class="btn btn-ghost lightbox-close" data-close-poster>Close</button>
+    </div>
+    <img
+      src="Images/little-fish-fest-poster.webp"
+      width="1200"
+      height="2600"
+      alt="Official Little Fish Music Fest poster. An iridescent sunfish swims in front of a mirrored disco ball, with glossy red liquid swirls and cyan light beams on a black background. Text reads Little Fish Music Fest, October 6th &amp; 7th, Lancaster, Hurt Lane.">
+  </dialog>
 
   <script src="script.js" defer></script>
 </body>
