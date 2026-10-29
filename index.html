@@ -1,270 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Fish Music Festival | Lancaster, Kentucky</title>
+  <meta name="description" content="Little Fish Music Festival — two days of live music in Lancaster, Kentucky. October 6th &amp; 7th at 123 Hurt Lane, Lancaster, KY 40444.">
+  <meta name="theme-color" content="#07060c">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://shawnroy1988.github.io/Little-Fish-Music-Festival/">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Little Fish Music Festival">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Little Fish Music Festival | Lancaster, Kentucky">
+  <meta property="og:description" content="Two days of live music, good people, and good times. October 6th &amp; 7th at 123 Hurt Lane, Lancaster, KY 40444.">
+  <meta property="og:url" content="https://shawnroy1988.github.io/Little-Fish-Music-Festival/">
+  <meta property="og:image" content="https://shawnroy1988.github.io/Little-Fish-Music-Festival/Images/og-little-fish.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Little Fish Music Fest poster: an iridescent sunfish and disco ball on black, with red liquid and cyan light. October 6th &amp; 7th, Lancaster, Hurt Lane.">
 
-    <meta
-        name="description"
-        content="Little Fish Music Festival - Two days of live music in Lancaster, Kentucky."
-    >
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Little Fish Music Festival | Lancaster, Kentucky">
+  <meta name="twitter:description" content="Two days of live music in Lancaster, Kentucky. October 6th &amp; 7th at 123 Hurt Lane.">
+  <meta name="twitter:image" content="https://shawnroy1988.github.io/Little-Fish-Music-Festival/Images/og-little-fish.jpg">
+  <meta name="twitter:image:alt" content="Little Fish Music Fest poster: an iridescent sunfish and disco ball on black, with red liquid and cyan light. October 6th &amp; 7th, Lancaster, Hurt Lane.">
 
-    <title>Little Fish Music Festival | Lancaster, Kentucky</title>
-
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/great-vibes-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- ================================
-         NAVIGATION
-    ================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#home">
+        <span class="logo-script">Little Fish</span>
+        <span class="logo-kicker">Music Fest</span>
+      </a>
 
-    <header class="navbar">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
 
-        <div class="logo">
-            LITTLE FISH
+      <nav id="site-nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#info">Festival Info</a>
+        <a href="#location">Location</a>
+        <a class="nav-ticket" href="#tickets">Tickets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="atmosphere" aria-hidden="true">
+        <span class="beam beam-a"></span>
+        <span class="beam beam-b"></span>
+        <span class="liquid liquid-a"></span>
+        <span class="liquid liquid-b"></span>
+        <span class="liquid liquid-c"></span>
+      </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-intro">
+            <p class="eyebrow">Two days · Live music · Lancaster, KY</p>
+            <h1 id="hero-title">
+              <span class="title-display">Little Fish</span>
+              <span class="title-script">Music Festival</span>
+            </h1>
+            <p class="date">October 6th &amp; 7th</p>
+          </div>
+          <div class="hero-more">
+            <p class="address">
+              123 Hurt Lane<br>
+              Lancaster, KY 40444
+            </p>
+            <p class="lede">Two days of live music, good people, and good times in Lancaster, Kentucky.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#tickets">Get Tickets</a>
+              <a class="btn btn-ghost" href="#lineup">View Lineup</a>
+            </div>
+          </div>
         </div>
 
-        <nav aria-label="Main navigation">
+        <figure class="poster">
+          <div class="poster-frame">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="Images/little-fish-fest-poster-800.webp 800w, Images/little-fish-fest-poster.webp 1200w"
+                sizes="(max-width: 899px) 78vw, 420px">
+              <img
+                src="Images/little-fish-fest-poster.jpg"
+                width="1200"
+                height="2600"
+                alt="Official Little Fish Music Fest poster. An iridescent sunfish swims in front of a mirrored disco ball, with glossy red liquid swirls and cyan light beams on a black background. Text reads Little Fish Music Fest, October 6th &amp; 7th, Lancaster, Hurt Lane."
+                fetchpriority="high"
+                decoding="async">
+            </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
 
-            <a href="#home">
-                HOME
-            </a>
+    <p class="date-band" aria-hidden="true">
+      <span>October 6th &amp; 7th</span>
+      <span aria-hidden="true">·</span>
+      <span>123 Hurt Lane</span>
+      <span aria-hidden="true">·</span>
+      <span>Lancaster, KY 40444</span>
+    </p>
 
-            <a href="#lineup">
-                LINEUP
-            </a>
+    <section class="lineup" id="lineup" aria-labelledby="lineup-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="index">01</span> Live at Little Fish</p>
+          <h2 id="lineup-title">The Lineup</h2>
+          <p>Two days of live music in Lancaster, Kentucky.</p>
+        </header>
 
-            <a href="#info">
-                FESTIVAL INFO
-            </a>
-
-            <a href="#location">
-                LOCATION
-            </a>
-
-            <a
-                href="#tickets"
-                class="ticket-nav"
-            >
-                TICKETS
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <!-- ================================
-             HERO
-        ================================= -->
-
-        <section
-            class="hero"
-            id="home"
-        >
-
-            <!-- FESTIVAL POSTER -->
-
-            <div class="hero-image">
-
-               <img
-    src="Images/little-fish-poster.png"
-    alt="Little Fish Music Festival"
->
-
+        <div class="day-grid">
+          <article class="day-card">
+            <p class="day-label">Day One</p>
+            <h3>Friday</h3>
+            <div class="headliner">
+              <p>Headliner</p>
+              <h4>Coming Soon</h4>
             </div>
+            <ul class="artist-list">
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+            </ul>
+          </article>
 
-
-            <!-- HERO CONTENT -->
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    TWO DAYS • LIVE MUSIC • LANCASTER, KY
-                </p>
-
-
-                <h1>
-                    LITTLE FISH
-
-                    <span>
-                        MUSIC FESTIVAL
-                    </span>
-                </h1>
-
-
-                <p class="date">
-                    OCTOBER 6TH &amp; 7TH
-                </p>
-
-
-                <p class="address">
-                    123 Hurt Lane<br>
-                    Lancaster, KY 40444
-                </p>
-
-
-                <p class="description">
-                    Two days of live music, good people,
-                    and good times in Lancaster, Kentucky.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#tickets"
-                        class="primary-button"
-                    >
-                        GET TICKETS
-                    </a>
-
-
-                    <a
-                        href="#lineup"
-                        class="secondary-button"
-                    >
-                        VIEW LINEUP
-                    </a>
-
-                </div>
-
+          <article class="day-card day-card-alt">
+            <p class="day-label">Day Two</p>
+            <h3>Saturday</h3>
+            <div class="headliner">
+              <p>Headliner</p>
+              <h4>Coming Soon</h4>
             </div>
+            <ul class="artist-list">
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+              <li>Artist Announcement Coming Soon</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <section class="info" id="info" aria-labelledby="info-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="index">02</span> Festival Info</p>
+          <h2 id="info-title">The Weekend</h2>
+          <p>Two days of live music, good people, and good times in Lancaster, Kentucky.</p>
+        </header>
 
+        <dl class="fact-grid">
+          <div class="fact">
+            <dt>When</dt>
+            <dd>October 6th &amp; 7th</dd>
+          </div>
+          <div class="fact">
+            <dt>Where</dt>
+            <dd>123 Hurt Lane, Lancaster, KY 40444</dd>
+          </div>
+          <div class="fact">
+            <dt>What</dt>
+            <dd>Two days of live music in Lancaster, Kentucky.</dd>
+          </div>
+        </dl>
 
-        <!-- ================================
-             LINEUP
-        ================================= -->
+        <aside class="notice" aria-label="Details not announced yet">
+          <p class="notice-kicker">Not announced yet</p>
+          <p>Set times, policies, and other on-site details have not been published. They will be added here when they are.</p>
+        </aside>
+      </div>
+    </section>
 
-        <section
-            class="lineup-section"
-            id="lineup"
-        >
+    <section class="location" id="location" aria-labelledby="location-title">
+      <div class="wrap location-grid">
+        <div class="location-copy">
+          <p class="eyebrow"><span class="index">03</span> Location</p>
+          <h2 id="location-title">Lancaster</h2>
+          <p class="place-script">Hurt Lane</p>
+          <address>
+            123 Hurt Lane<br>
+            Lancaster, KY 40444
+          </address>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=123%20Hurt%20Lane%2C%20Lancaster%2C%20KY%2040444" target="_blank" rel="noopener noreferrer">
+            Get directions to 123 Hurt Lane
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
 
-            <div class="section-heading">
+        <div class="venue-card" aria-hidden="true">
+          <p class="venue-kicker">The grounds</p>
+          <p class="venue-place">123</p>
+          <p class="venue-street">Hurt Lane</p>
+          <p class="venue-city">Lancaster, Kentucky</p>
+        </div>
+      </div>
+    </section>
 
-                <p class="eyebrow">
-                    LIVE AT LITTLE FISH
-                </p>
+    <section class="tickets" id="tickets" aria-labelledby="tickets-title">
+      <div class="wrap">
+        <div class="ticket-panel">
+          <p class="eyebrow"><span class="index">04</span> Tickets</p>
+          <h2 id="tickets-title">Coming Soon</h2>
+          <p class="ticket-lead">Ticket prices and a purchase link have not been announced yet.</p>
+          <p class="notice-kicker">Not announced yet</p>
+          <p>This page will be updated when tickets go on sale. Nothing is listed for purchase right now.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo-script footer-script">Little Fish</p>
+        <p class="footer-name">Music Festival</p>
+      </div>
+      <address>
+        123 Hurt Lane<br>
+        Lancaster, KY 40444
+      </address>
+      <p>October 6th &amp; 7th<br>Lancaster, Kentucky</p>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#info">Festival Info</a>
+        <a href="#location">Location</a>
+        <a href="#tickets">Tickets</a>
+      </nav>
+    </div>
+    <p class="colophon">Little Fish Music Festival · Lancaster, Kentucky</p>
+  </footer>
 
-                <h2>
-                    THE LINEUP
-                </h2>
-
-
-                <p>
-                    Two days of live music in Lancaster, Kentucky.
-                </p>
-
-            </div>
-
-
-            <div class="lineup-grid">
-
-
-                <!-- ========================
-                     FRIDAY
-                ========================= -->
-
-                <article class="lineup-day">
-
-                    <p class="day-label">
-                        DAY ONE
-                    </p>
-
-
-                    <h3>
-                        FRIDAY
-                    </h3>
-
-
-                    <div class="headliner">
-
-                        <span>
-                            HEADLINER
-                        </span>
-
-                        <h4>
-                            COMING SOON
-                        </h4>
-
-                    </div>
-
-
-                    <div class="artist-list">
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                        <p>
-                     class="day-label">
-                        DAY TWO
-                    </p>
-
-
-                    <h3>
-                        SATURDAY
-                    </h3>
-
-
-                    <div class="headliner">
-
-                        <span>
-                            HEADLINER
-                        </span>
-
-                        <h4>
-                            COMING SOON
-                        </h4>
-
-                    </div>
-
-
-                    <div class="artist-list">
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                        <p>
-                            Artist Announcement Coming Soon
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-    </main>
-
+  <script src="script.js" defer></script>
 </body>
-
 </html>
